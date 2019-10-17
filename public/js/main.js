@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+	$('')
+
+
 	$('nav a').click(function(){
 		let href = $(this).attr('href');
 		$('html, body').animate(
@@ -69,7 +73,12 @@ $(document).ready(function(){
 	$('#menuToggle').click(function(){
 		$('nav ul').slideToggle();
 		menuShown = !menuShown;
-		if(menuShown) $(this).attr('src','img/cross.svg');
-		else $(this).attr('src','img/menu.svg');
+		if(menuShown){
+			$(this).attr('src','img/cross.svg');
+			$(this).css('boxShadow','none');
+		}else{
+		 	$(this).attr('src','img/menu.svg');
+			$(this).css('boxShadow','1px 1px 10px gray');
+		}
 	});
 });

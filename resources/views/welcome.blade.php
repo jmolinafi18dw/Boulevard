@@ -53,6 +53,7 @@
                 <p>Consta de tres plantas, una gasolinera, cinco zonas de aparcamiento propios y grandes instalaciones, expandidas por su amplio dominio. Se encuentra en el barrio de Zaramaga a una media hora de la famosa calle Paz andando y a unos doce minutos en coche. También tiene un hotel llamado igual que él (Hotel Boulevard) de cuatro estrellas que incluye un Restaurante Ñam y un restaurante chino Fulitu.
                 <br>
                 A tan solo dos minutos andando se encuentra la zona industrial de Gamarra.</p>
+                <img src="img/plano.png" alt="plano-tienda">
             </div>
             <section>
                 <div id="tiendas">
