@@ -1,0 +1,231 @@
+/* ------------------------------ FUENTES ----------------------------- */
+@font-face {
+  font-family: "asap";
+  src: url("../fonts/Asap.ttf");
+}
+@font-face {
+  font-family: "indie";
+  src: url("../fonts/IndieFlower.ttf");
+}
+
+/* ------------------------------ ESTILOS ----------------------------- */
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	overflow-x: hidden;
+	width:100vw;
+	position:relative;
+}
+
+/* IMÁGENES DE FONDO */
+
+.blob{
+	position: absolute;
+	width:max-content;
+	z-index:-1;
+
+}
+#blob1{
+	top:-30vh;
+	left:-40vw;
+	height:100vh;
+	transform: rotate(90deg) scale(2);
+	opacity: .75;
+}
+#blob2{
+	top:-20vh;
+	right:-35vw;
+	height:200vh;
+	opacity: .75;
+}
+#blob3{
+	top:80vh;
+	right:0;
+	width:150vw;
+	height: 150vh;
+	opacity: .75;
+}
+#blob4{
+	bottom:-50vh;
+	right:-40vw;
+	height:max-content;
+	opacity: .75;
+	transform: scale(1.2);
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+nav{
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	top:0;
+	right: 0;
+	width:100%;
+	z-index: 3;
+}
+nav ul{
+	display: flex;
+	flex-direction: row;
+	padding-left: 0.5em;
+	border-radius: 0 0 0 1.5em;
+}
+nav li{
+	list-style: none;
+}
+nav a{
+	text-decoration: none;
+	color:#7d7d7d;
+	padding:1em;
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: asap;
+}
+nav a:hover{
+	color:black;
+}
+
+/* HEADER */
+
+header{
+	height:100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: verdana;
+	text-transform: uppercase;
+	letter-spacing: .8em;
+	color:#151515;
+}
+
+#logo{
+	height: 12.5em;
+}
+
+#arrow_down{
+	position:absolute;
+	top: 90vh;
+	height: 3em;
+	cursor: pointer;
+}
+
+/* PRIMERA SECTION -> INFORMACIÓN */
+
+#info{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-family: "asap";
+	font-size:1.2em;
+	height:80vh;
+	padding: 0 20vw;
+	text-align: center;
+}
+#info p, br{
+	margin: .75em 0;
+}	
+#info h1{
+	font-family: "indie";
+	font-size:4em;
+	margin: .2em 0;
+}
+
+/* FLECHA PARA SUBIR AL PRINCIPIO DE LA PÁGINA */
+
+#arrow_up{
+	display:none; 
+	position: fixed;
+	bottom:3em;
+	right:3em;
+	background-color: white;
+	border-radius: 100%;
+	box-shadow: 1px 1px 20px #151515;
+	width:3em;
+	height:3em;
+	z-index: 2;
+	cursor: pointer;
+}
+section{
+	display: flex;
+	justify-content: space-around;
+	padding:10vh 0;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* SEGUNDA SECCIÓN -> TIENDAS */
+#tiendas{
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-column-gap: 6.25%;
+	grid-row-gap: 7.5vh;
+	padding: 6% 5%;
+}
+.tienda{
+	width:100%;
+	height:20vh;
+	box-shadow: 1px 1px 7px gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	padding:0 3%;
+	border-radius: .3em;
+	cursor:pointer;
+
+	position: relative;
+}
+.tienda:hover{
+	box-shadow: 1px 1px 40px #151515;
+}
+.tienda:nth-child(n+9){
+	display: none; 
+}
+.tienda img{
+	width:100%;
+	height: 100%;
+}
+
+button{
+	width:max-content;
+	user-select: none;
+	margin-top: 10vh;
+	padding: .75em 1em;
+	text-transform: uppercase;
+	font-size:1.2em;
+	font-weight: bold;
+	letter-spacing: .1em;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	color:#7d7d7d;
+}
+button:hover{
+	color: black;
+}
+
+/* TERCERA SECCIÓN -> DATOS DE CONTACTO */
+#contacto{
+	display: flex;
+	flex-direction: column;
+}
+#mapa{
+	width:100%;
+	height:50vh;
+	margin-top: 2em;
+}
+
+/* FOOTER */
+footer{
+	font-family: indie;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
