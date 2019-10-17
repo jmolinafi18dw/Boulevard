@@ -10,7 +10,6 @@
     <body>
 
         <!-- IMÁGENES DEL FONDO -->
-        <!--<img src="img/blob1.svg" id="blob1">-->
 
         <svg class="blob" id="blob1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(300,300)">
@@ -34,6 +33,7 @@
         </svg>
 
         <nav>
+            <img src="img/menu.svg" id="menuToggle" alt="menuToggle">
             <ul>
                 <li><a href="#main">Información</a></li>
                 <li><a href="#tiendas">Tiendas</a></li>
@@ -103,20 +103,24 @@
                 <button id="mostrar-mas-tiendas">Ver todo</button>
             </section>
             <section id="contacto">
-                <div>
-                    <div>
-                        Horario:
-                        <ul>
-                            <li>Lunes   10:00–24:00</li>
-                            <li>Martes  10:00–24:00</li>
-                            <li>Miércoles   10:00–24:00</li>
-                            <li>Jueves  10:00–24:00</li>
-                            <li>Viernes 10:00–1:30</li>
-                            <li>Sábado  10:00–1:30</li>
-                            <li>Domingo 11:30–24:00</li>
+                <h1>Datos de contacto</h1>
+                <div id="contact-icons">
+                    <div class="contact-div">
+                        <span class="contact-icon"><img src="img/time.svg" alt="horario"> Horario</span>
+                        <ul class="contact-data">
+                            <li><span class="horario-title">Lunes</span>10:00–24:00</li>
+                            <li><span class="horario-title">Martes</span>10:00–24:00</li>
+                            <li><span class="horario-title">Miércoles</span>10:00–24:00</li>
+                            <li><span class="horario-title">Jueves</span>10:00–24:00</li>
+                            <li><span class="horario-title">Viernes</span>:00–1:30</li>
+                            <li><span class="horario-title">Sábado</span>10:00–1:30</li>
+                            <li><span class="horario-title">Domingo</span>:30–24:00</li>
                         </ul>
                     </div>
-            
+                    <div class="contact-div">
+                        <span class="contact-icon"><img src="img/phone.svg" alt="tfno"> Teléfono</span>
+                        <span class="contact-data">945 15 54 40</span>
+                    </div>
                 </div>
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.5147058120165!2d-2.6711807709542152!3d42.86197925297592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc25aa31fd801%3A0x490b3150779ed227!2sCentro%20Comercial%20El%20Boulevard!5e0!3m2!1ses!2ses!4v1571211960538!5m2!1ses!2ses" frameborder="0" allowfullscreen=""></iframe>
             </section>

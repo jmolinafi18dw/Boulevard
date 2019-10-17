@@ -18,6 +18,15 @@ body{
 	overflow-x: hidden;
 	width:100vw;
 	position:relative;
+	font-family: asap;
+	font-size: 16px;
+}
+
+h1{
+	font-family: "indie";
+	font-size:4em;
+	margin: .2em 0;
+	text-align: center;
 }
 
 /* IMÁGENES DE FONDO */
@@ -26,7 +35,6 @@ body{
 	position: absolute;
 	width:max-content;
 	z-index:-1;
-
 }
 #blob1{
 	top:-30vh;
@@ -49,7 +57,7 @@ body{
 	opacity: .75;
 }
 #blob4{
-	bottom:-50vh;
+	bottom:0;
 	right:-40vw;
 	height:max-content;
 	opacity: .75;
@@ -66,6 +74,9 @@ nav{
 	right: 0;
 	width:100%;
 	z-index: 3;
+}
+#menuToggle{
+	display: none;
 }
 nav ul{
 	display: flex;
@@ -84,7 +95,6 @@ nav a{
 	align-items: center;
 	font-size: 1.2em;
 	font-weight: bold;
-	font-family: asap;
 }
 nav a:hover{
 	color:black;
@@ -122,7 +132,6 @@ header{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	font-family: "asap";
 	font-size:1.2em;
 	height:80vh;
 	padding: 0 20vw;
@@ -131,11 +140,6 @@ header{
 #info p, br{
 	margin: .75em 0;
 }	
-#info h1{
-	font-family: "indie";
-	font-size:4em;
-	margin: .2em 0;
-}
 
 /* FLECHA PARA SUBIR AL PRINCIPIO DE LA PÁGINA */
 
@@ -144,7 +148,7 @@ header{
 	position: fixed;
 	bottom:3em;
 	right:3em;
-	background-color: white;
+	background-color: rgba(255,255,255,.8);
 	border-radius: 100%;
 	box-shadow: 1px 1px 20px #151515;
 	width:3em;
@@ -152,6 +156,9 @@ header{
 	z-index: 2;
 	cursor: pointer;
 }
+
+/* SEGUNDA SECCIÓN -> TIENDAS */
+
 section{
 	display: flex;
 	justify-content: space-around;
@@ -159,8 +166,6 @@ section{
 	align-items: center;
 	flex-direction: column;
 }
-
-/* SEGUNDA SECCIÓN -> TIENDAS */
 #tiendas{
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
@@ -212,9 +217,60 @@ button:hover{
 }
 
 /* TERCERA SECCIÓN -> DATOS DE CONTACTO */
+
 #contacto{
 	display: flex;
 	flex-direction: column;
+}
+#contact-icons{
+	display: flex;
+	flex-direction: row;
+}
+#contact-icons > div{
+	margin: 0 2em;
+	display: flex;
+	flex-direction: column;
+}
+.contact-div{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.contact-icon{
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	font-size: 1.2em;
+	text-align: center;
+}
+.contact-icon img{
+	height:1.2em;
+	margin-right: 0.2em;
+}
+.horario-title{
+	font-weight: bold;
+}
+.contact-data{
+	display: none;
+	position:absolute;
+	padding: .5em 2em;
+	width:max-content;
+	background-color: white;
+	box-shadow: 1px 1px 7px gray;
+	z-index:5;
+	top: calc(100% + .5em);
+	left: calc(-25% - 1.5em);
+	border-radius: .7em;
+}
+.contact-data > li{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: .5em 0;
 }
 #mapa{
 	width:100%;
@@ -228,4 +284,70 @@ footer{
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+/* ----------------------------- RESPONSIVE STYLES ------------------------*/
+/* TABLET */
+@media (max-width: 1000px){
+	nav{
+		justify-content: center;
+	}
+	nav ul{
+		width:100%;
+		justify-content: space-around;
+		border-radius: 0;
+		background-color: rgba(255,255,255,.9)!important;
+	}
+	#info{
+		padding: 0 5vw;
+	}
+	#tiendas{
+		grid-template-columns: 28% 28% 28%;
+	}
+	#arrow_down{
+		top: 82vh;
+		height:5em;
+	}
+}
+/* MÓVIL */
+@media (max-width: 700px){
+	body{
+		font-size: 11px;
+	}
+	#menuToggle{
+		display: block;
+		margin-top: 2em;
+		height: 3em;
+		cursor: pointer;
+		z-index: 7;
+		background-color: rgba(255,255,255,.5);
+		box-shadow: 1px 1px 10px gray;
+		border-radius: 100%;
+		padding: .5em;
+	}
+	nav ul{
+		display: none;
+		position: fixed;
+		top:0;
+		left:0;
+		padding-top: 4em;
+		height: 100vh;
+		width:100vw;
+	}
+	nav a{
+		font-size: 2em;
+		text-align: center!important;
+	}
+	#tiendas{
+		grid-template-columns: 90%;
+	}
+	#arrow_down{
+		top: 77vh;
+		height:10em;
+	}
+	#arrow_up{
+		height: 4em;
+		width: 4em;
+		right: calc(50% - 2em);
+	}
 }

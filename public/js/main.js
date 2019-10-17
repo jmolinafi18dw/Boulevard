@@ -55,4 +55,21 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		scrollStyling();
 	});
+
+	// mostrar modales y/o ocultarlos al hacer click en los iconos de contacto
+	let modalShown = false;
+	$('.contact-icon').click(function(){
+		modalShown = !modalShown;
+		$('.contact-data').slideUp()
+		if(modalShown) $(this).siblings().slideUp();
+		else $(this).siblings().slideDown();
+	});
+
+	let menuShown = false;
+	$('#menuToggle').click(function(){
+		$('nav ul').slideToggle();
+		menuShown = !menuShown;
+		if(menuShown) $(this).attr('src','img/cross.svg');
+		else $(this).attr('src','img/menu.svg');
+	});
 });
