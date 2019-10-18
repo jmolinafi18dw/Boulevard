@@ -53,6 +53,7 @@
                 <p>Consta de tres plantas, una gasolinera, cinco zonas de aparcamiento propios y grandes instalaciones, expandidas por su amplio dominio. Se encuentra en el barrio de Zaramaga a una media hora de la famosa calle Paz andando y a unos doce minutos en coche. También tiene un hotel llamado igual que él (Hotel Boulevard) de cuatro estrellas que incluye un Restaurante Ñam y un restaurante chino Fulitu.
                 <br>
                 A tan solo dos minutos andando se encuentra la zona industrial de Gamarra.</p>
+                <img src="img/plano.png" alt="plano-tienda">
             </div>
             <section>
                 <div id="tiendas">
@@ -124,7 +125,7 @@
                 </div>
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.5147058120165!2d-2.6711807709542152!3d42.86197925297592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc25aa31fd801%3A0x490b3150779ed227!2sCentro%20Comercial%20El%20Boulevard!5e0!3m2!1ses!2ses!4v1571211960538!5m2!1ses!2ses" frameborder="0" allowfullscreen=""></iframe>
             </section>
-            <footer>David Belinchon, Koldo Intxausti y Jefry Molina &copy 2019</footer>
         </div>
+        <footer>David Belinchon, Koldo Intxausti y Jefry Molina &copy 2019</footer>
     </body>
 </html>

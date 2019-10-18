@@ -133,13 +133,16 @@ header{
 	justify-content: center;
 	flex-direction: column;
 	font-size:1.2em;
-	height:80vh;
 	padding: 0 20vw;
 	text-align: center;
 }
 #info p, br{
 	margin: .75em 0;
-}	
+}
+#info img{
+	width: 100%;
+	margin-top: 10%;
+}
 
 /* FLECHA PARA SUBIR AL PRINCIPIO DE LA PÁGINA */
 
@@ -331,7 +334,7 @@ footer{
 		top:0;
 		left:0;
 		padding-top: 4em;
-		height: 100vh;
+		height: 100%;
 		width:100vw;
 	}
 	nav a{
