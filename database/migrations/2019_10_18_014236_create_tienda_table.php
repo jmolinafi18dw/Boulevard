@@ -13,12 +13,14 @@ class CreateTiendaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tienda', function (Blueprint $table) {
+        Schema::create('tiendas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre', 30);
             $table->text('direccion', 1000);
             $table->string('logo', 100);
-            $table->string('categoria');
+            $table->string('telefono',9);
+            $table->string('web',100);
+            $table->string('descripcion',1000);
         });
     }
 
@@ -29,6 +31,6 @@ class CreateTiendaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tienda');
+        Schema::dropIfExists('tiendas');
     }
 }
