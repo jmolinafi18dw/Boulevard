@@ -3,13 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Boulevard - @yield('title')</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        @yield('css')
+        <link rel="stylesheet" type="text/css" href="/css/tienda.css">   
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
         <script src="lib/jquery-3.4.1.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-
         <!-- IMÁGENES DEL FONDO -->
 
         <svg class="blob" id="blob1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">

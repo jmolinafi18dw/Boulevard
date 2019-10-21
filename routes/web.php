@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-Route::get('/tienda',function(){
-	return view('tienda');
-})->name('tienda');
+Route::get('/','TiendaController@landingPage')->name('welcome');
+Route::get('/t-{id}/','TiendaController@getTienda')->name('tienda');
+Route::get('/t-{id}/gestion','TiendaController@getGestion')->name('gestion');
+
+Route::get('/t-{id}/anadir','TiendaController@goAnadir')->name('anadir');

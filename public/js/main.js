@@ -10,6 +10,10 @@ $(document).ready(function(){
 		);
 	});
 
+	if($('.tienda:nth-child(n+9)').length === 0){
+		$('#mostrar-mas-tiendas').hide();
+	}
+
 	// esta variable guarda el estado de las tiendas (si están mostradas sólo 8 o todas)
 	let tiendasMostradas = false;
 	$('#mostrar-mas-tiendas').click(function(){

@@ -57,49 +57,13 @@
             </div>
             <section>
                 <div id="tiendas">
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
-                    <div class="tienda">
-                        <img src="img/zara.jpg" alt="zara-logo">
-                    </div>
+                    @foreach($tiendas as $tienda)
+                        <a href="{{url('t-'.$tienda->id)}}">
+                            <div class="tienda">
+                                <img src="img/tiendas/{{$tienda->logo}}" alt="zara-logo">
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
                 <button id="mostrar-mas-tiendas">Ver todo</button>
             </section>

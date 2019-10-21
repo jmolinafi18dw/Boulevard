@@ -201,8 +201,9 @@ section{
 	height: 100%;
 }
 
-button{
+button, #filtro a{
 	width:max-content;
+	text-decoration: none;
 	user-select: none;
 	margin-top: 10vh;
 	padding: .75em 1em;
@@ -215,7 +216,7 @@ button{
 	background-color: transparent;
 	color:#7d7d7d;
 }
-button:hover{
+button:hover, #filtro a:hover{
 	color: black;
 }
 
