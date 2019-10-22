@@ -44,5 +44,39 @@ class ProductosSeeder extends Seeder
             'imagen'=>'zara.jpg',
             'id_tienda'=>1
         ]);
+        DB::table('productos')->insert([
+            'nombre' => 'Red Coat',
+            'descripcion'=>'Dark red coat',
+            'imagen'=>'zara.jpg',
+            'id_tienda'=>3,
+            'lang'=>'en'
+        ]);
+        DB::table('productos')->insert([
+            'nombre' => 'Red Coat',
+            'descripcion'=>'Dark red coat',
+            'imagen'=>'zara.jpg',
+            'id_tienda'=>1,
+            'lang'=>'en'
+        ]);
+        DB::table('productos')->insert([
+            'nombre' => 'Zapatos verdes',
+            'descripcion'=>'Zapatos verde pistacho',
+            'imagen'=>'zara.jpg',
+            'stock'=>false,
+            'id_tienda'=>4
+        ]);
+        DB::table('productos')->insert([
+            'nombre' => 'Gafas de sol negras',
+            'descripcion'=>'Gafas de sol negro cristal azul',
+            'imagen'=>'zara.jpg',
+            'id_tienda'=>2
+        ]);
+        DB::table('productos')->insert([
+            'nombre' => 'Green shoes',
+            'descripcion'=>'Light green shoes',
+            'imagen'=>'zara.jpg',
+            'id_tienda'=>2,
+            'lang'=>'en'
+        ]);
     }
 }

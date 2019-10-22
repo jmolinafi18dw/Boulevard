@@ -33,7 +33,7 @@
         </svg>
 
         <nav>
-            <img src="img/menu.svg" id="menuToggle" alt="menuToggle">
+            <img src="/img/menu.svg" id="menuToggle" alt="menuToggle">
             <ul>
                 <li><a href="#main">Información</a></li>
                 <li><a href="#tiendas">Tiendas</a></li>
@@ -42,10 +42,10 @@
         </nav>
 
         <header>
-            <img id="logo" src="img/logo.png" alt="logo">
-            <img id="arrow_down" src="img/arrow_down.svg" alt="arrow_down">
+            <img id="logo" src="/img/logo.png" alt="logo">
+            <img id="arrow_down" src="/img/arrow_down.svg" alt="arrow_down">
         </header>
-        <img src="img/arrow_up.svg" id="arrow_up"/>
+        <img src="/img/arrow_up.svg" id="arrow_up"/>
         <div id="main">
             <div id="info">
                 <h1>Boulevard</h1>
@@ -53,14 +53,14 @@
                 <p>Consta de tres plantas, una gasolinera, cinco zonas de aparcamiento propios y grandes instalaciones, expandidas por su amplio dominio. Se encuentra en el barrio de Zaramaga a una media hora de la famosa calle Paz andando y a unos doce minutos en coche. También tiene un hotel llamado igual que él (Hotel Boulevard) de cuatro estrellas que incluye un Restaurante Ñam y un restaurante chino Fulitu.
                 <br>
                 A tan solo dos minutos andando se encuentra la zona industrial de Gamarra.</p>
-                <img src="img/plano.png" alt="plano-tienda">
+                <img src="/img/plano.png" alt="plano-tienda">
             </div>
             <section>
                 <div id="tiendas">
                     @foreach($tiendas as $tienda)
                         <a href="{{url('t-'.$tienda->id)}}">
                             <div class="tienda">
-                                <img src="img/tiendas/{{$tienda->logo}}" alt="zara-logo">
+                                <img src="/img/tiendas/{{$tienda->logo}}" alt="zara-logo">
                             </div>
                         </a>
                     @endforeach
@@ -71,7 +71,7 @@
                 <h1>Datos de contacto</h1>
                 <div id="contact-icons">
                     <div class="contact-div">
-                        <span class="contact-icon"><img src="img/time.svg" alt="horario"> Horario</span>
+                        <span class="contact-icon"><img src="/img/time.svg" alt="horario"> Horario</span>
                         <ul class="contact-data">
                             <li><span class="horario-title">Lunes</span>10:00–24:00</li>
                             <li><span class="horario-title">Martes</span>10:00–24:00</li>
@@ -83,7 +83,7 @@
                         </ul>
                     </div>
                     <div class="contact-div">
-                        <span class="contact-icon"><img src="img/phone.svg" alt="tfno"> Teléfono</span>
+                        <span class="contact-icon"><img src="/img/phone.svg" alt="tfno"> Teléfono</span>
                         <span class="contact-data">945 15 54 40</span>
                     </div>
                 </div>

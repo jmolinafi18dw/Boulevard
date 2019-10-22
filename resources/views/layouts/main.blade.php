@@ -5,8 +5,8 @@
         <title>Boulevard - @yield('title')</title>
         <link rel="stylesheet" type="text/css" href="/css/tienda.css">   
         <link rel="stylesheet" type="text/css" href="/css/styles.css">
-        <script src="lib/jquery-3.4.1.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="/lib/jquery-3.4.1.min.js"></script>
+        <script src="/js/main.js"></script>
     </head>
     <body>
         <!-- IMÁGENES DEL FONDO -->
@@ -31,15 +31,18 @@
                 <path d="M125.4,-163.3C167.7,-141.8,210.8,-112.2,228.3,-71.2C245.7,-30.2,237.4,22.1,210.7,57.3C184,92.5,138.7,110.6,100.5,133.8C62.3,157.1,31.2,185.5,-5.8,193.5C-42.7,201.5,-85.4,188.9,-118.4,164C-151.4,139,-174.6,101.6,-176.1,64.8C-177.5,28,-157.2,-8.2,-147.7,-51.2C-138.1,-94.1,-139.3,-143.7,-116.5,-171.5C-93.7,-199.2,-46.8,-205.1,-2.6,-201.5C41.5,-197.8,83.1,-184.7,125.4,-163.3Z" fill="#419a48"/>
             </g>
         </svg>
-
+        <header class="compressed-header">
+            <img src="/img/logo.png">
+        </header>
         <nav>
-            <img src="img/menu.svg" id="menuToggle" alt="menuToggle">
+            <img src="/img/menu.svg" id="menuToggle" alt="menuToggle">
             @yield('nav')
         </nav>
-        <img src="img/arrow_up.svg" id="arrow_up"/>
+        <img src="/img/arrow_up.svg" id="arrow_up"/>
         <div id="main">
             @yield('content')
         </div>
+        @yield('js')
         <footer>David Belinchon, Koldo Intxausti y Jefry Molina &copy 2019</footer>
     </body>
 </html>

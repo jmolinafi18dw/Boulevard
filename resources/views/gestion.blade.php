@@ -9,12 +9,16 @@
 
 @section('content')
         <div id="main">
-            <div id="info">
-                <img  class="logo-tienda" src="/img/tiendas/{{$tienda->logo}}">
-                <p><strong>Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                <p><strong>Localización en el Centro</strong>: {{$tienda->direccion}}</p>
-                <p><strong>Teléfono</strong>: {{$tienda->telefono}}</p>
-                <p><a href="{{$tienda->web}}">Web</a></p>
+            <div id="tinfo">
+                <div>
+                    <p><strong>Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
+                    <p><strong>Localización en el Centro</strong>: {{$tienda->direccion}}</p>
+                    <p><strong>Teléfono</strong>: {{$tienda->telefono}}</p>
+                    <p><a href="{{$tienda->web}}">Web</a></p>
+                </div>
+                <div>
+                    <img src="/img/tiendas/{{$tienda->logo}}">
+                </div>
             </div>
             <div id="filtro">
 				<input type="text" name="Filtro">
@@ -36,15 +40,30 @@
 							<td>{{$producto->nombre}}</td>
 							<td>{{$producto->descripcion}}</td>
 							<td>
-								@if($producto->stock==0)
-									No disponible
-								@else
-									Disponible
-								@endif
+								<form action="{{url('t-'.$tienda->id.'p-'.$producto->id.'/cambiarStock')}}" method="post">
+									@csrf
+									<input type="checkbox" name="stock"
+										@if($producto->stock==1)
+											checked
+										@endif
+									>
+									<input style="display:none" type="submit" name="submit">
+								</form>
 							</td>
 							<td><img src="/img/productos/{{$producto->imagen}}"></td>
+							<td>
+								<a href="{{url('t-'.$tienda->id.'p-'.$producto->id.'/eliminar')}}"><img src="/img/delete.svg"></a>
+							</td>
 						</tr>
 					@endforeach
 				</table>
 			</div>
+@endsection
+@section('js')
+	<script>
+		// cuando cambia el valor del checkbox se hace submit del formulario, y se cambia su valor en la base de datos
+		$('input[type="checkbox"]').change(function(){
+			$(this).siblings('input[type="submit"]').click();
+		});
+	</script>
 @endsection

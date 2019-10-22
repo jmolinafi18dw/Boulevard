@@ -10,6 +10,31 @@ body{
 	background-size: cover;
 	background-position: -30vw -40vh;
 }
+.compressed-header{
+	display: flex;
+	height: 15vh;
+	margin: 5vh 0;
+	flex-direction: row;
+}
+.compressed-header img{
+	height: 100%;
+}
+#tinfo{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+#tinfo > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#tinfo p{
+	margin: .5em;
+}
+#tinfo img{
+	height: 20vh;
+}
 .container table{
 	background-color: transparent;
 	width: 100%;
@@ -33,7 +58,7 @@ body{
 	width:100%;
 	justify-content: space-around;
 	align-items: center;
-	height: 20vh;
+	margin-top: 1.5em;
 }
 #filtro input{
 	flex:50%;
@@ -41,4 +66,30 @@ body{
 #filtro button, #filtro a{
 	margin:0!important;
 	font-weight: bold!important;
+}
+.tienda-logo{
+	height: 10vh;
+	margin-bottom: 5vh;
+	display: flex;
+	justify-content: center;
+}
+.tienda-logo > img{
+	height: 100%;
+}
+.tarjeta{
+	background-color: white;
+	box-shadow: 1px 1px 7px gray;
+	width:max-content;
+	margin: 1em auto;
+	padding: 5%	2%;
+	border-radius: 10px;
+}
+.addForm{
+	display: flex;
+	flex-direction: column;
+	width:max-content;
+	margin:0 auto;
+}
+.addForm > * {
+	margin: .5em 0;
 }
