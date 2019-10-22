@@ -14,7 +14,7 @@ class TiendasSeeder extends Seeder
         DB::table('tiendas')->insert([
             'nombre' => 'Zara',
             'direccion' => 'Local 3',
-            'logo'=>'zara.jpg',
+            'logo'=>'zara.png',
             'telefono'=>'945612302',
             'web'=>'https://www.zara.com',
             'descripcion'=>'Tienda de ropa'
@@ -38,7 +38,7 @@ class TiendasSeeder extends Seeder
         DB::table('tiendas')->insert([
             'nombre' => 'Pimkie',
             'direccion' => 'Local 25',
-            'logo'=>'pimkie.jpg',
+            'logo'=>'pimkie.png',
             'telefono'=>'945612302',
             'web'=>'https://www.pimkie.com/',
             'descripcion'=>'Tienda de ropa'
@@ -78,7 +78,7 @@ class TiendasSeeder extends Seeder
         DB::table('tiendas')->insert([
             'nombre' => 'Mango',
             'direccion' => 'Local 24',
-            'logo'=>'mango.jpg',
+            'logo'=>'mango.png',
             'telefono'=>'945612302',
             'web'=>'https://www.mango.com/',
             'descripcion'=>'Tienda de ropa'

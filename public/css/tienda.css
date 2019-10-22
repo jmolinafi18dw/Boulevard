@@ -1,14 +1,11 @@
-#blob1, #blob2, #blob3, #blob4{
-	display: none!important;
-}
 body{
 	width: 80% !important;
 	padding: 0 10%;
-	background-image: url(../img/blob-shape.svg);
+	background-image: url(../img/wave1.svg), url(../img/wave2.svg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: -30vw -40vh;
+	background-size: 200% 80%;
+	background-position: center bottom;
 }
 .compressed-header{
 	display: flex;
@@ -28,15 +25,18 @@ body{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	height:50vh;
+	margin-bottom: 5vh;
 }
 #tinfo p{
 	margin: .5em;
+	font-size:1.5em;
 }
 #tinfo img{
 	height: 20vh;
 }
 .container table{
-	background-color: transparent;
+	background-color: white;
 	width: 100%;
 	margin-top: 5%;
 	border: 1px solid #151515;
@@ -92,4 +92,27 @@ body{
 }
 .addForm > * {
 	margin: .5em 0;
+}
+
+@media (max-width: 1000px){
+	body{
+		background-size: 200% 50%;
+	}
+	nav{
+		justify-content: flex-end!important;
+	}
+}
+@media (max-width: 700px){
+	body{
+		background-size: 400% 30%;
+	}
+	#filtro{
+		flex-direction: column;
+	}
+	#tinfo{
+		grid-template-columns: 100%;
+	}
+	#tinfo > div{
+		height: 25vh;	
+	}
 }
