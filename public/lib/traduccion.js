@@ -1,4 +1,5 @@
 
+		//Segun el idioma utiliza la herramienta translate de JQuery para traducir todo el contenido definido del body
 		function cambiaridiomaeus(){
 			var translator = $('body').translate({lang: "eus", t :dict});	
 		}
@@ -10,7 +11,7 @@
 		function cambiaridiomaes(){
 			var translator = $('body').translate({lang: "es", t :dict});	
 		}
-		
+		//Con este valor recojemos todos los data-trn-keys para definir sus traducciones
 		var dict = {
 			"hola":{
 			es: "En la ficha Insertar, las galerías incluyen elementos diseñados para coordinar con la apariencia general del documento. Puede utilizar estas galerías para insertar tablas, encabezados, pies de página, listas, portadas y otros bloques de creación del documento.",
