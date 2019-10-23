@@ -11,9 +11,9 @@
         <div id="main">
             <div id="tinfo">
                 <div>
-                    <p><strong>Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                    <p><strong>Localización en el Centro</strong>: {{$tienda->direccion}}</p>
-                    <p><strong>Teléfono</strong>: {{$tienda->telefono}}</p>
+                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
+                    <p><strong class="trn" data-trn-key="Loc">Localización en el Centro</strong>: {{$tienda->direccion}}</p>
+                    <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
                     <p><a href="{{$tienda->web}}">Web</a></p>
                 </div>
                 <div>
@@ -22,18 +22,18 @@
             </div>
             <div id="filtro">
 				<input type="text" name="Filtro" id="filtroTexto">
-				<button id="filtroSubmit">Buscar</button>
-				<button id="filtroClear">Limpiar</button>
-				<a href="{{url('t-'.$id.'/anadir')}}">Añadir Nuevo</a>
+				<button id="filtroSubmit" class="trn" data-trn-key="Buscar">Buscar</button>
+				<button id="filtroClear" class="trn" data-trn-key="Limp">Limpiar</button>
+				<a href="{{url('t-'.$id.'/anadir')}}" class="trn" data-trn-key="Añadir">Añadir Nuevo</a>
 			</div>
 			<div class="container">
 				
 				<table>
 					<tr id="lineaTit">
-						<td>Nombre</td>
-						<td>Descripción</td>
+						<td data-trn-key="Nombre">Nombre</td>
+						<td data-trn-key="Desc">Descripción</td>
 						<td>Stock</td>
-						<td>Imagen</td>
+						<td data-trn-key="Img">Imagen</td>
 						<td></td>
 					</tr>
 					@foreach($productos as $producto)

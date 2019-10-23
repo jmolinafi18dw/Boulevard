@@ -5,7 +5,7 @@
 @endsection
 
 @section('nav')
-    <a href="{{url('t-'.$tienda->id.'/gestion')}}">Gestión</a>
+    <a href="{{url('t-'.$tienda->id.'/gestion')}}" class="trn" data-trn-key="Gest">Gestión</a>
 @endsection
 
 @section('content')
@@ -13,9 +13,9 @@
 
             <div id="tinfo">
                 <div>
-                    <p><strong>Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                    <p><strong>Localización en el Centro</strong>: {{$tienda->direccion}}</p>
-                    <p><strong>Teléfono</strong>: {{$tienda->telefono}}</p>
+                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
+                    <p><strong class="trn" data-trn-key="Loc">Localización en el Centro</strong>: {{$tienda->direccion}}</p>
+                    <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
                     <p><a href="{{$tienda->web}}">Web</a></p>
                 </div>
                 <div>

@@ -16,9 +16,9 @@
         <form action="" method="post" class="addForm" enctype="multipart/form-data" onsubmit="return validar()">
         	@csrf
         	<select name="lang">
-        		<option value="null" disabled selected>Elige un idioma</option>
-        		<option value="en">Inglés</option>
-        		<option value="es">Español</option>
+        		<option value="null" disabled selected class="trn" data-trn-key="Elegir">Elige un idioma</option>
+        		<option value="en" class="trn" data-trn-key="Ing">Inglés</option>
+        		<option value="es" class="trn" data-trn-key="Esp">Español</option>
         	</select>
         	<input type="text" placeholder="Nombre del producto" id="nombre" name="nombre">
         	<textarea placeholder="Descripcion" name="descripcion"></textarea>
@@ -26,7 +26,7 @@
         		<input type="checkbox" name="stock"><label for="stock">Stock</label>
         	</div>
         	<div style="display: flex; flex-direction: column;">
-        		<label for="imagen">Suba aquí una imagen del producto:</label>
+        		<label for="imagen" class="trn" data-trn-key="SubImg">Suba aquí una imagen del producto:</label>
                 <!-- este input solo acepta ficheros de tipo imagen -->
         		<input type="file" id="imagen" name="imagen" accept="image/*">
         	</div>
