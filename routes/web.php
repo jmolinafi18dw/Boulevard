@@ -16,7 +16,7 @@ Route::get('/t-{id}/{lang}','MainController@getTienda')->name('tienda');
 Route::get('/t-{id}/gestion/{lang}','MainController@getGestion')->name('gestion');
 
 Route::get('/t-{id}/anadir/{lang}','MainController@goAnadir')->name('anadir');
-Route::post('/t-{id}/anadir/','MainController@nuevoProducto')->name('nuevoProducto');
+Route::post('/t-{id}/anadir/{lang}','MainController@nuevoProducto')->name('nuevoProducto');
 
 Route::get('/t-{id}p-{pId}/eliminar/{lang}','MainController@eliminarProducto')->name('eliminarProducto');
 Route::post('/t-{id}p-{pId}/cambiarStock/{lang}','MainController@cambiarStock')->name('cambiarStock');
