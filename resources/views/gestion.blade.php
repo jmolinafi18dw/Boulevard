@@ -9,6 +9,9 @@
 
 @section('content')
         <div id="main">
+        	<div id="selectedImage">
+        		<img src=""/>
+        	</div>
             <div id="tinfo">
                 <div>
                     <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
@@ -67,6 +70,11 @@
 			$(this).siblings('input[type="submit"]').click();
 		});
 
+		// estando en el input si pulsas enter hará click sobre le botón de buscar, llamando así a la función de debajo
+		$('#filtroTexto').on('keypress',function(e) {
+		    if(e.which == 13) $('#filtroSubmit').click()
+		});
+
 		$('#filtroSubmit').click(function(){
 			let texto = $('#filtroTexto').val();
 			// muestra todos los tr por si alguno ha sido escondido
@@ -81,7 +89,7 @@
 				}).length;
 
 				if(visibleRows === 1){
-					$('table').append('<tr id="noResults"><td colspan="5" align="center">No hay resultados correspondientes a <i>'+texto+'</i></td></tr>')
+					$('table').append('<tr id="noResults"><td colspan="5" align="center">No hay resultados correspondientes a <i>'+texto+'</i><br><small>Recuerde que la busqueda tiene en cuenta las mayusculas.</small></td></tr>')
 				}
 				$('#filtroTexto').val(null);
 			}
@@ -90,6 +98,16 @@
 			$('tr').show();
 			$('#noResults').hide();
 			$('#filtroTexto').val(null);
+		});
+
+		// ver imagen en grande
+		$('.imagenProducto').click(function(){
+			$('#selectedImage > img').attr('src',$(this).attr('src'));
+			$('#selectedImage').css('display','flex');
+		});
+		$('#selectedImage').click(function(e){
+			if(e.target.nodeName.toLowerCase() != 'img')
+				$(this).fadeOut(100);
 		});
 	</script>
 @endsection
