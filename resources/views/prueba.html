@@ -1,0 +1,33 @@
+
+        <form action="" method="post" class="addForm" enctype="multipart/form-data" onsubmit="return validar()">
+        	
+        	<input type="text" placeholder="Nombre" id="nombre" name="nombre">
+        	
+        	<div style="display: flex; flex-direction: column;">
+        		<label for="imagen">Suba aquí una imagen del producto:</label>
+                <!-- este input solo acepta ficheros de tipo imagen -->
+        		<input type="file" id="imagen" name="imagen" accept="image/*">
+        	</div>
+        	<input type="submit" name="submit">
+        </form>
+
+<script type="text/javascript">
+    function validar() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        valtexto = document.getElementById("nombre").value;
+        valimg = document.getElementById("imagen").value;
+
+        //la condición
+        if (valtexto.length == 0 || /^\s+$/.test(valtexto) || valtexto.length ==) {
+            return false;
+            alert("Introduce un nombre de producto");
+        }
+
+        if (valimg.length == 0) {
+             return false;
+            alert("Introduce una imagen de producto");
+        }
+        return true; 
+        
+    }
+</script>
