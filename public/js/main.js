@@ -1,20 +1,18 @@
     function validar() {
         //obtenemos el valor que se puso en los campos del formulario
-        valtexto = document.getElementById("nombre").value;
-        valimg = document.getElementById("imagen").value;
+        let valtexto = $('#nombre').val();
+        let valimg = $('#imagen').val();
 
         //la condición
         if (valtexto.length == 0 || /^\s+$/.test(valtexto) || valtexto.length == null) {
-            alert("Introduce un nombre de producto");
+            $('#nombre').css('borderColor','tomato');
             return false;
         }
 
         if (valimg.length == 0) {
-            alert("Introduce una imagen de producto");
             return false;
         }
-        return true; 
-        
+        return true;
     }
 
 $(document).ready(function(){
