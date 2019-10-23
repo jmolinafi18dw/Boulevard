@@ -13,7 +13,7 @@
 
 Route::get('/','TiendaController@landingPage')->name('welcome');
 Route::get('/t-{id}/','TiendaController@getTienda')->name('tienda');
-Route::get('/t-{id}/gestion','TiendaController@getGestion')->name('gestion');
+Route::get('/t-{id}/gestion/{lang}','TiendaController@getGestion')->name('gestion');
 
 Route::get('/t-{id}/anadir','TiendaController@goAnadir')->name('anadir');
 Route::post('/t-{id}/anadir','TiendaController@nuevoProducto')->name('nuevoProducto');

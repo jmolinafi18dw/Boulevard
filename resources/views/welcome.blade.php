@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="lib/jquery-3.4.1.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="lib/jquery.translate.js"></script>
+        <script src="lib/traduccion.js"></script>
     </head>
     <body>
 
@@ -37,7 +39,12 @@
             <ul>
                 <li><a href="#main" class="trn" data-trn-key="Info">Información</a></li>
                 <li><a href="#tiendas" class="trn" data-trn-key="Tienda">Tiendas</a></li>
-                <li><a href="#contacto" class="trn" data-trn-key="Datos">Datos de contacto</a></li>
+                <li><a href="#contacto" class="trn" data-trn-key="datoscont">Datos de contacto</a></li>
+                <li><select name="idioma">
+                    <option onclick="cambiaridiomaes()" selected>ES</option>
+                    <option onclick="cambiaridiomaen()">EN</option>
+                    <option onclick="cambiaridiomaeus()">EUS</option>
+                </select></li>
             </ul>
         </nav>
 

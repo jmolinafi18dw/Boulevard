@@ -5,7 +5,7 @@
 @endsection
 
 @section('nav')
-    <a href="{{url('t-'.$tienda->id.'/gestion')}}" class="trn" data-trn-key="Gest">Gestión</a>
+    <a href="{{url('t-'.$tienda->id.'/gestion/')}}" class="trn" data-trn-key="Gest">Gestión</a>
 @endsection
 
 @section('content')
