@@ -23,6 +23,7 @@
             <div id="filtro">
 				<input type="text" name="Filtro" id="filtroTexto">
 				<button id="filtroSubmit">Buscar</button>
+				<button id="filtroClear">Limpiar</button>
 				<a href="{{url('t-'.$id.'/anadir')}}">Añadir Nuevo</a>
 			</div>
 			<div class="container">
@@ -67,7 +68,28 @@
 		});
 
 		$('#filtroSubmit').click(function(){
-			if('#')
+			let texto = $('#filtroTexto').val();
+			// muestra todos los tr por si alguno ha sido escondido
+			$('tr').show();
+			$('#noResults').hide();
+			if(texto){
+				// mira que cada "tr" (menos el primero porque es el título), no contenga el texto introducido en el input, y si no lo tiene lo esconde
+				$('tr:not(:first-child):not(:contains('+texto+'))').hide();
+				
+				let visibleRows = $('tr').filter(function() {
+				    return $(this).css('display') !== 'none';
+				}).length;
+
+				if(visibleRows === 1){
+					$('table').append('<tr id="noResults"><td colspan="5" align="center">No hay resultados correspondientes a <i>'+texto+'</i></td></tr>')
+				}
+				$('#filtroTexto').val(null);
+			}
+		});
+		$('#filtroClear').click(function(){
+			$('tr').show();
+			$('#noResults').hide();
+			$('#filtroTexto').val(null);
 		});
 	</script>
 @endsection
