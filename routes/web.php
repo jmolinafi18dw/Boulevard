@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/','TiendaController@landingPage')->name('welcome');
-Route::get('/t-{id}/','TiendaController@getTienda')->name('tienda');
-Route::get('/t-{id}/gestion','TiendaController@getGestion')->name('gestion');
+Route::get('/{lang?}','MainController@landingPage')->name('welcome');
+Route::get('/t-{id}/{lang}','MainController@getTienda')->name('tienda');
+Route::get('/t-{id}/gestion/{lang}','MainController@getGestion')->name('gestion');
 
-Route::get('/t-{id}/anadir','TiendaController@goAnadir')->name('anadir');
-Route::post('/t-{id}/anadir','TiendaController@nuevoProducto')->name('nuevoProducto');
+Route::get('/t-{id}/anadir/{lang}','MainController@goAnadir')->name('anadir');
+Route::post('/t-{id}/anadir/','MainController@nuevoProducto')->name('nuevoProducto');
 
-Route::get('/t-{id}p-{pId}/eliminar','TiendaController@eliminarProducto')->name('eliminarProducto');
-Route::post('/t-{id}p-{pId}/cambiarStock','TiendaController@cambiarStock')->name('cambiarStock');
+Route::get('/t-{id}p-{pId}/eliminar/{lang}','MainController@eliminarProducto')->name('eliminarProducto');
+Route::post('/t-{id}p-{pId}/cambiarStock/{lang}','MainController@cambiarStock')->name('cambiarStock');
 

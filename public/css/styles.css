@@ -282,6 +282,28 @@ button:hover, #filtro a:hover{
 	margin-top: 2em;
 }
 
+#contact-form{
+	display: flex;
+	flex-direction: column;
+	width:max-content;
+	margin: 0 auto;
+	text-align: center;
+	margin: 5vh 0;
+	background-color: white;
+	box-shadow: 1px 1px 7px gray;
+	padding:2%;
+	border-radius: 10px;
+}
+#contact-form > *{
+	margin: 2% 0;
+}
+#contact-form > h5{
+	margin-bottom: 4%;
+	font-family: indie;
+	font-size: 18px;
+}
+
+
 /* FOOTER */
 footer{
 	font-family: indie;

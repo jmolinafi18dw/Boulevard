@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-
 	<div class="tarjeta">
         <div class="tienda-logo">
         	<img src="/img/tiendas/{{$tienda->logo}}">

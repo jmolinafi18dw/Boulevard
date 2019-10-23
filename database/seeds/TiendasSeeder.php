@@ -17,7 +17,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'zara.png',
             'telefono'=>'945612302',
             'web'=>'https://www.zara.com',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Pull&Bear',
@@ -25,7 +28,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'pull-bear.png',
             'telefono'=>'945612302',
             'web'=>'https://www.pullandbear.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'H&M',
@@ -33,7 +39,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'hm.png',
             'telefono'=>'945612302',
             'web'=>'https://www2.hm.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Pimkie',
@@ -41,7 +50,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'pimkie.png',
             'telefono'=>'945612302',
             'web'=>'https://www.pimkie.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Dooers',
@@ -49,7 +61,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'dooers.png',
             'telefono'=>'945612302',
             'web'=>'www.dooers.com',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Massimo Dutti',
@@ -57,7 +72,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'massimo-dutti.png',
             'telefono'=>'945612302',
             'web'=>'https://www.massimodutti.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Springfield',
@@ -65,7 +83,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'springfield.png',
             'telefono'=>'945612302',
             'web'=>'www.zara.com',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Punt Roma',
@@ -73,7 +94,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'punto-roma.png',
             'telefono'=>'945612302',
             'web'=>'https://www.puntroma.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
         DB::table('tiendas')->insert([
             'nombre' => 'Mango',
@@ -81,7 +105,10 @@ class TiendasSeeder extends Seeder
             'logo'=>'mango.png',
             'telefono'=>'945612302',
             'web'=>'https://www.mango.com/',
-            'descripcion'=>'Tienda de ropa'
+            'descripcion_es'=>'Tienda de ropa',
+            'descripcion_en'=>'Clothes Shop',
+            'descripcion_eus'=>'Arropa denda',
+            'urlVideo'=>'https://www.youtube.com/embed/m1rY4AfkWEY'
         ]);
     }
 }

@@ -20,7 +20,10 @@ class CreateTiendaTable extends Migration
             $table->string('logo', 100);
             $table->string('telefono',9);
             $table->string('web',100);
-            $table->string('descripcion',1000);
+            $table->string('descripcion_es',1000);
+            $table->string('descripcion_en',1000);
+            $table->string('descripcion_eus',1000);
+            $table->string('urlVideo',1000);
         });
     }
 

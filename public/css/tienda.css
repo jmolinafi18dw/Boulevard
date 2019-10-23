@@ -13,8 +13,16 @@ body{
 	margin: 5vh 0;
 	flex-direction: row;
 }
-.compressed-header img{
+.compressed-header a, .compressed-header img{
 	height: 100%;
+}
+.gestionTLogo{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+.gestionTLogo img{
+	width:40%;
 }
 #tinfo{
 	display: grid;
@@ -126,6 +134,9 @@ body{
 	nav{
 		justify-content: flex-end!important;
 	}
+	.gestionTLogo img{
+		width:60%!important;
+	}
 }
 @media (max-width: 700px){
 	body{
@@ -139,5 +150,8 @@ body{
 	}
 	#tinfo > div{
 		height: 25vh;	
+	}
+	.gestionTLogo img{{
+		width:100%!important;
 	}
 }

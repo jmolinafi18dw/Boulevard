@@ -21,8 +21,8 @@ class ProductosSeeder extends Seeder
         DB::table('productos')->insert([
             'nombre' => 'Abrigo rojo',
             'descripcion'=>'Abrigo rojo oscuro',
-            'id_tienda'=>1
             'extension'=>'jpg',
+            'id_tienda'=>1
         ]);
         DB::table('productos')->insert([
             'nombre' => 'Pantalón negro',
@@ -41,8 +41,8 @@ class ProductosSeeder extends Seeder
         DB::table('productos')->insert([
             'nombre' => 'Gafas de sol negras',
             'descripcion'=>'Gafas de sol negro cristal azul',
-            'id_tienda'=>1
             'extension'=>'jpg',
+            'id_tienda'=>1
         ]);
         DB::table('productos')->insert([
             'nombre' => 'Red Coat',
@@ -68,8 +68,8 @@ class ProductosSeeder extends Seeder
         DB::table('productos')->insert([
             'nombre' => 'Gafas de sol negras',
             'descripcion'=>'Gafas de sol negro cristal azul',
-            'id_tienda'=>2
             'extension'=>'jpg',
+            'id_tienda'=>2
         ]);
         DB::table('productos')->insert([
             'nombre' => 'Green shoes',

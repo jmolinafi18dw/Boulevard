@@ -5,29 +5,25 @@
 @endsection
 
 @section('nav')
+	<select name="idioma" id="idiomaSelect" onchange="window.location='{{url('t-'.$tienda->id.'/gestion/')}}/'+this.options[this.selectedIndex].value">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="eus">EUS</option>
+    </select>
 @endsection
-
 @section('content')
         <div id="main">
         	<div id="selectedImage">
         		<img src=""/>
         	</div>
-            <div id="tinfo">
-                <div>
-                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                    <p><strong class="trn" data-trn-key="Loc">Localización en el Centro</strong>: {{$tienda->direccion}}</p>
-                    <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
-                    <p><a href="{{$tienda->web}}">Web</a></p>
-                </div>
-                <div>
-                    <img src="/img/tiendas/{{$tienda->logo}}">
-                </div>
+            <div class="gestionTLogo">
+                <img src="/img/tiendas/{{$tienda->logo}}">
             </div>
             <div id="filtro">
 				<input type="text" name="Filtro" id="filtroTexto">
 				<button id="filtroSubmit" class="trn" data-trn-key="Buscar">Buscar</button>
 				<button id="filtroClear" class="trn" data-trn-key="Limp">Limpiar</button>
-				<a href="{{url('t-'.$id.'/anadir')}}" class="trn" data-trn-key="Añadir">Añadir Nuevo</a>
+				<a href="{{url('t-'.$id.'/anadir/'.$lang)}}" class="trn" id="addButton" data-trn-key="Añadir">Añadir Nuevo</a>
 			</div>
 			<div class="container">
 				
@@ -44,7 +40,7 @@
 							<td>{{$producto->nombre}}</td>
 							<td>{{$producto->descripcion}}</td>
 							<td align="center">
-								<form action="{{url('t-'.$tienda->id.'p-'.$producto->id.'/cambiarStock')}}" method="post">
+								<form action="{{url('t-'.$tienda->id.'p-'.$producto->id.'/cambiarStock/'.$lang)}}" method="post">
 									@csrf
 									<input type="checkbox" name="stock"
 										@if($producto->stock==1)
@@ -56,7 +52,7 @@
 							</td>
 							<td align="center"><img src="/img/productos/producto-{{$producto->id}}.{{$producto->extension}}" class="imagenProducto"></td>
 							<td align="center">
-								<a href="{{url('t-'.$tienda->id.'p-'.$producto->id.'/eliminar')}}"><img src="/img/delete.svg"></a>
+								<a href="{{url('t-'.$tienda->id.'p-'.$producto->id.'/eliminar/'.$lang)}}"><img src="/img/delete.svg"></a>
 							</td>
 						</tr>
 					@endforeach
@@ -65,6 +61,10 @@
 @endsection
 @section('js')
 	<script>
+
+        optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
+        optionSelected[0].setAttribute('selected',true);
+
 		// cuando cambia el valor del checkbox se hace submit del formulario, y se cambia su valor en la base de datos
 		$('input[type="checkbox"]').change(function(){
 			$(this).siblings('input[type="submit"]').click();
