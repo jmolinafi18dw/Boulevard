@@ -39,16 +39,20 @@ body{
 	background-color: white;
 	width: 100%;
 	margin-top: 5%;
-	border: 1px solid #151515;
+	box-shadow: 1px 1px 7px gray;
+}
+.container tr:nth-child(even){
+	background-color: rgba(209, 237, 216, 1);
 }
 .container table td{
-	border: solid #151515;
-	border-width: 0 .5px .5px 0;
 	padding:.5em 0;
 }
+.imagenProducto{
+	height: 2em;
+}
 #lineaTit td{
-	background-color: #151515;
-	color: white;
+	background-color: rgba(176, 235, 191, 1);
+	color: rgba(81, 87, 81, 1);
 	font-weight: bold;
 	text-align: center;
 }

@@ -17,9 +17,9 @@ class CreateProductosTable extends Migration
             $table->increments('id');
             $table->string('nombre', 30);
             $table->text('descripcion', 1000)->nullable();
-            $table->string('imagen', 100);
             $table->boolean('stock')->default(TRUE);
             $table->integer('id_tienda');
+            $table->string('extension',5)->default('jpg');
             $table->string('lang',2)->default('es');
         });
     }

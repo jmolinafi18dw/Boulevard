@@ -12,7 +12,7 @@
         <div class="tienda-logo">
         	<img src="/img/tiendas/{{$tienda->logo}}">
         </div>
-        <form action="" method="post" class="addForm">
+        <form action="" method="post" class="addForm" enctype="multipart/form-data">
         	@csrf
         	<select name="lang">
         		<option value="null" disabled selected>Elige un idioma</option>
@@ -26,7 +26,8 @@
         	</div>
         	<div style="display: flex; flex-direction: column;">
         		<label for="imagen">Suba aquí una imagen del producto:</label>
-        		<input type="file" name="imagen" required>
+                <!-- este input solo acepta ficheros de tipo imagen -->
+        		<input type="file" name="imagen" required accept="image/*">
         	</div>
         	<input type="submit" name="submit">
         </form>

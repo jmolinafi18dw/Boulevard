@@ -1,18 +1,12 @@
 $(document).ready(function(){
 
-	$('')
-
-
+	// moverse entre enlaces con animación
 	$('nav a').click(function(){
 		let href = $(this).attr('href');
 		$('html, body').animate(
 			{scrollTop:($(href).offset().top)},500
 		);
 	});
-
-	if($('.tienda:nth-child(n+9)').length === 0){
-		$('#mostrar-mas-tiendas').hide();
-	}
 
 	// esta variable guarda el estado de las tiendas (si están mostradas sólo 8 o todas)
 	let tiendasMostradas = false;

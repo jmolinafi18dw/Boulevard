@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div id="filtro">
-				<input type="text" name="Filtro">
-				<button>Buscar</button>
+				<input type="text" name="Filtro" id="filtroTexto">
+				<button id="filtroSubmit">Buscar</button>
 				<a href="{{url('t-'.$id.'/anadir')}}">Añadir Nuevo</a>
 			</div>
 			<div class="container">
@@ -39,7 +39,7 @@
 						<tr>
 							<td>{{$producto->nombre}}</td>
 							<td>{{$producto->descripcion}}</td>
-							<td>
+							<td align="center">
 								<form action="{{url('t-'.$tienda->id.'p-'.$producto->id.'/cambiarStock')}}" method="post">
 									@csrf
 									<input type="checkbox" name="stock"
@@ -50,8 +50,8 @@
 									<input style="display:none" type="submit" name="submit">
 								</form>
 							</td>
-							<td><img src="/img/productos/{{$producto->imagen}}"></td>
-							<td>
+							<td align="center"><img src="/img/productos/producto-{{$producto->id}}.{{$producto->extension}}" class="imagenProducto"></td>
+							<td align="center">
 								<a href="{{url('t-'.$tienda->id.'p-'.$producto->id.'/eliminar')}}"><img src="/img/delete.svg"></a>
 							</td>
 						</tr>
@@ -64,6 +64,10 @@
 		// cuando cambia el valor del checkbox se hace submit del formulario, y se cambia su valor en la base de datos
 		$('input[type="checkbox"]').change(function(){
 			$(this).siblings('input[type="submit"]').click();
+		});
+
+		$('#filtroSubmit').click(function(){
+			if('#')
 		});
 	</script>
 @endsection
