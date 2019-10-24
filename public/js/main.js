@@ -1,3 +1,22 @@
+    function validar() {
+        //obtenemos el valor que se puso en los campos del formulario
+        valtexto = document.getElementById("nombre").value;
+        valimg = document.getElementById("imagen").value;
+
+        //la condición
+        if (valtexto.length == 0 || /^\s+$/.test(valtexto) || valtexto.length == null) {
+            alert("Introduce un nombre de producto");
+            return false;
+        }
+
+        if (valimg.length == 0) {
+            alert("Introduce una imagen de producto");
+            return false;
+        }
+        return true; 
+        
+    }
+
 $(document).ready(function(){
 
 	// moverse entre enlaces con animación
@@ -78,5 +97,6 @@ $(document).ready(function(){
 		 	$(this).attr('src','img/menu.svg');
 			$(this).css('boxShadow','1px 1px 10px gray');
 		}
+
 	});
 });
