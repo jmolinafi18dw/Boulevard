@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="lib/jquery-3.4.1.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="lib/jquery.translate.js"></script>
+        <script src="lib/traduccion.js"></script>
     </head>
     <body>
 
@@ -35,9 +37,14 @@
         <nav>
             <img src="/img/menu.svg" id="menuToggle" alt="menuToggle">
             <ul>
-                <li><a href="#main">Información</a></li>
-                <li><a href="#tiendas">Tiendas</a></li>
-                <li><a href="#contacto">Datos de contacto</a></li>
+                <li><a href="#main" class="trn" data-trn-key="Info">Información</a></li>
+                <li><a href="#tiendas" class="trn" data-trn-key="Tienda">Tiendas</a></li>
+                <li><a href="#contacto" class="trn" data-trn-key="datoscont">Datos de contacto</a></li>
+                <li><select name="idioma">
+                    <option onclick="cambiaridiomaes()" selected>ES</option>
+                    <option onclick="cambiaridiomaen()">EN</option>
+                    <option onclick="cambiaridiomaeus()">EUS</option>
+                </select></li>
             </ul>
         </nav>
 
@@ -49,8 +56,8 @@
         <div id="main">
             <div id="info">
                 <h1>Boulevard</h1>
-                <p>El Boulevard es un maxicentro comercial situado en la ciudad de Vitoria (Álava)</p>
-                <p>Consta de tres plantas, una gasolinera, cinco zonas de aparcamiento propios y grandes instalaciones, expandidas por su amplio dominio. Se encuentra en el barrio de Zaramaga a una media hora de la famosa calle Paz andando y a unos doce minutos en coche. También tiene un hotel llamado igual que él (Hotel Boulevard) de cuatro estrellas que incluye un Restaurante Ñam y un restaurante chino Fulitu.
+                <p class="trn" data-trn-key="Descrip">El Boulevard es un maxicentro comercial situado en la ciudad de Vitoria (Álava)<br>
+                Consta de tres plantas, una gasolinera, cinco zonas de aparcamiento propios y grandes instalaciones, expandidas por su amplio dominio. Se encuentra en el barrio de Zaramaga a una media hora de la famosa calle Paz andando y a unos doce minutos en coche. También tiene un hotel llamado igual que él (Hotel Boulevard) de cuatro estrellas que incluye un Restaurante Ñam y un restaurante chino Fulitu.
                 <br>
                 A tan solo dos minutos andando se encuentra la zona industrial de Gamarra.</p>
                 <img src="/img/plano.png" alt="plano-tienda">
@@ -65,25 +72,25 @@
                         </a>
                     @endforeach
                 </div>
-                <button id="mostrar-mas-tiendas">Ver todo</button>
+                <button id="mostrar-mas-tiendas" class="trn" data-trn-key="vertodo">Ver todo</button>
             </section>
             <section id="contacto">
-                <h1>Datos de contacto</h1>
+                <h1 class="trn" data-trn-key="datoscont">Datos de contacto</h1>
                 <div id="contact-icons">
                     <div class="contact-div">
-                        <span class="contact-icon"><img src="/img/time.svg" alt="horario"> Horario</span>
+                        <span class="contact-icon"><img src="/img/time.svg" alt="horario" class="trn" data-trn-key="horario"> Horario</span>
                         <ul class="contact-data">
-                            <li><span class="horario-title">Lunes</span>10:00–24:00</li>
-                            <li><span class="horario-title">Martes</span>10:00–24:00</li>
-                            <li><span class="horario-title">Miércoles</span>10:00–24:00</li>
-                            <li><span class="horario-title">Jueves</span>10:00–24:00</li>
-                            <li><span class="horario-title">Viernes</span>:00–1:30</li>
-                            <li><span class="horario-title">Sábado</span>10:00–1:30</li>
-                            <li><span class="horario-title">Domingo</span>:30–24:00</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Lun">Lunes</span>10:00–24:00</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Mar">Martes</span>10:00–24:00</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Mie">Miércoles</span>10:00–24:00</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Jue">Jueves</span>10:00–24:00</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Vie">Viernes</span>:00–1:30</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Sab">Sábado</span>10:00–1:30</li>
+                            <li><span class="horario-title" class="trn" data-trn-key="Dom">Domingo</span>:30–24:00</li>
                         </ul>
                     </div>
                     <div class="contact-div">
-                        <span class="contact-icon"><img src="/img/phone.svg" alt="tfno"> Teléfono</span>
+                        <span class="contact-icon"><img src="/img/phone.svg" alt="tfl"> Teléfono</span>
                         <span class="contact-data">945 15 54 40</span>
                     </div>
                 </div>

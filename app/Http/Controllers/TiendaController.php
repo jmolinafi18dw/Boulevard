@@ -9,8 +9,6 @@ use App\Producto;
 
 class TiendaController extends Controller
 {
-    public $lang = 'es';
-
     // redirige al landing page con las tiendas de la base de datos guardads en una variable
 	function landingPage(){
 		return view('welcome',[
@@ -31,7 +29,7 @@ class TiendaController extends Controller
     	return view('gestion',[
     		'id'=>$id,
     		'tienda'=>Tienda::where('id',$id)->first(),
-    		'productos'=>Producto::where('id_tienda',$id)->where('lang',$this->lang)->get()
+    		'productos'=>Producto::where('id_tienda',$id)->where('lang','es')->get()
    		]);
     }
 
