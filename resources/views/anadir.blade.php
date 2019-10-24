@@ -34,3 +34,23 @@
         </form>
     </div>
 @endsection
+<script type="text/javascript">
+        function validar() {
+        //obteniendo el valor que se puso en los campos del formulario
+        valtexto = document.getElementById("nombre").value;
+        valimg = document.getElementById("imagen").value;
+
+        //la condición
+        if (valtexto.length == 0 || /^\s+$/.test(valtexto) || valtexto.length == null) {
+            alert("Introduce un nombre de producto");
+            return false;
+        }
+
+        if (valimg.length == 0) {
+            alert("Introduce una imagen de producto");
+            return false;
+        }
+        return true;        
+    }
+
+</script>

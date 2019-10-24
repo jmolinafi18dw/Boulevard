@@ -1,5 +1,5 @@
-function validar() {
-        //obteniendo el valor que se puso en el campo text del formulario
+    function validar() {
+        //obtenemos el valor que se puso en los campos del formulario
         valtexto = document.getElementById("nombre").value;
         valimg = document.getElementById("imagen").value;
 
@@ -13,9 +13,8 @@ function validar() {
             alert("Introduce una imagen de producto");
             return false;
         }
-        else{
-            return true; 
-        }
+        return true; 
+        
     }
 
 $(document).ready(function(){
@@ -100,5 +99,4 @@ $(document).ready(function(){
 		}
 
 	});
-}
-
+});
