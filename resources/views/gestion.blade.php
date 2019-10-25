@@ -11,16 +11,6 @@
         <option value="eus">EUS</option>
     </select>
 @endsection
-@section('js')
-	<script>
-        $(document).ready(function(){
-            $('#addButton').attr('href','{{url('t-'.$tienda->id.'/anadir/')}}/'+getLang());
-            optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
-            optionSelected[0].setAttribute('selected',true);
-        })
-    </script>
-@endsection
-
 @section('content')
         <div id="main">
         	<div id="selectedImage">
@@ -79,6 +69,11 @@
 @endsection
 @section('js')
 	<script>
+
+		$('#addButton').attr('href','{{url('t-'.$tienda->id.'/anadir/')}}/'+getLang());
+        optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
+        optionSelected[0].setAttribute('selected',true);
+         
 		// cuando cambia el valor del checkbox se hace submit del formulario, y se cambia su valor en la base de datos
 		$('input[type="checkbox"]').change(function(){
 			$(this).siblings('input[type="submit"]').click();

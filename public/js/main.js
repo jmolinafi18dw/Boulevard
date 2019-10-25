@@ -21,6 +21,10 @@
 
 $(document).ready(function(){
 	
+    
+        optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
+        optionSelected[0].setAttribute('selected',true);
+
 	// moverse entre enlaces con animación
 	$('nav a').click(function(){
 		let href = $(this).attr('href');
@@ -29,16 +33,6 @@ $(document).ready(function(){
 		);
 	});
 
-	// esta variable guarda el estado de las tiendas (si están mostradas sólo 8 o todas)
-	let tiendasMostradas = false;
-	$('#mostrar-mas-tiendas').click(function(){
-		// si están escondidas las muestra y viceversa
-		$('.tienda:nth-child(n+9)').slideToggle(100);
-		// cambia el estado de la variable al contrario al actual
-		tiendasMostradas = !tiendasMostradas;
-		// cambia el texto del botón dependiendo del estado de la variable
-		$(this).text(tiendasMostradas?'ver menos':'ver todo');
-	});
 
 	// animaciones de scroll al clickar iconos de flechas
 	$('#arrow_down').click(function(){

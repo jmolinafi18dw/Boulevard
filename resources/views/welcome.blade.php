@@ -93,7 +93,6 @@
                         </a>
                     @endforeach
                 </div>
-                <button id="mostrar-mas-tiendas" class="trn" data-trn-key="vertodo">Ver todo</button>
             </section>
             <section id="contacto">
                 <h1 class="trn" data-trn-key="datoscont">Datos de contacto</h1>

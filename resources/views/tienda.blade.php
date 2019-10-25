@@ -28,7 +28,21 @@
 
             <div id="tinfo">
                 <div>
-                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
+                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> 
+                        @php
+                            switch($lang){
+                                case 'en':
+                                    echo $tienda->descripcion_en;
+                                break;
+                                case 'eus':
+                                    echo $tienda->descripcion_eus;
+                                break;
+                                default:
+                                    echo $tienda->descripcion_es;
+                                break;
+                            }
+                        @endphp
+                    </p>
                     <p><strong class="trn" data-trn-key="Loc">Local</strong>: {{$tienda->direccion}}</p>
                     <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
                     <p><a href="{{$tienda->web}}"><img src="/img/explore.svg"></a></p>
@@ -37,5 +51,8 @@
                     <img src="/img/tiendas/{{$tienda->logo}}">
                 </div>
             </div>
-            
+            <div style="display: flex; justify-content: center;">
+                <iframe style="width:100%; height: 40vh" src="{{$tienda->urlVideo}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
 @endsection
