@@ -1,15 +1,44 @@
+		let lang = 'es';
+
+		// añade a la url de cada tiend el idioma seleccionado
+	    function añadirIdiomaTiendas(){
+		    $('.tiendaLink').each(function(){
+		        $(this).attr('href',$(this).attr('data-url')+getLang());
+		    });
+	    }
+
 		function cambiaridiomaeus(){
+			setLang('eus');
 			var translator = $('body').translate({lang: "eus", t :dict});	
+			añadirIdiomaTiendas();
 		}
 	
 		function cambiaridiomaen(){
+			setLang('en');
 			var translator = $('body').translate({lang: "en", t :dict});	
+			añadirIdiomaTiendas();
 		}
 	
 		function cambiaridiomaes(){
-			var translator = $('body').translate({lang: "es", t :dict});	
+			setLang('es');
+			var translator = $('body').translate({lang: "es", t :dict});
+			añadirIdiomaTiendas();	
 		}
-		
+
+		//devuelve el lenguaje actual
+		function getLang(){
+			return lang;
+		}
+		//establece un lenguaje
+		function setLang(newLang){
+			lang = newLang;
+		}
+
+		//ejecuta la función al cargar la pagina
+		$(document).ready(function(){
+			añadirIdiomaTiendas();
+		})
+
 		var dict = {
 			"hola":{
 			es: "En la ficha Insertar, las galerías incluyen elementos diseñados para coordinar con la apariencia general del documento. Puede utilizar estas galerías para insertar tablas, encabezados, pies de página, listas, portadas y otros bloques de creación del documento.",

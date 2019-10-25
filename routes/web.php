@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/','TiendaController@landingPage')->name('welcome');
-Route::get('/t-{id}/','TiendaController@getTienda')->name('tienda');
-Route::get('/t-{id}/gestion','TiendaController@getGestion')->name('gestion');
+Route::get('/{lang?}','TiendaController@landingPage')->name('welcome');
+Route::get('/t-{id}/{lang}','TiendaController@getTienda')->name('tienda');
+Route::get('/t-{id}/gestion/{lang}','TiendaController@getGestion')->name('gestion');
 
-Route::get('/t-{id}/anadir','TiendaController@goAnadir')->name('anadir');
+Route::get('/t-{id}/anadir/{lang}','TiendaController@goAnadir')->name('anadir');
 Route::post('/t-{id}/anadir','TiendaController@nuevoProducto')->name('nuevoProducto');
 
 Route::get('/t-{id}p-{pId}/eliminar','TiendaController@eliminarProducto')->name('eliminarProducto');

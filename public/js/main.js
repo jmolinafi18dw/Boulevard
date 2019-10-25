@@ -17,8 +17,10 @@
         
     }
 
-$(document).ready(function(){
+    
 
+$(document).ready(function(){
+	
 	// moverse entre enlaces con animación
 	$('nav a').click(function(){
 		let href = $(this).attr('href');

@@ -10,26 +10,29 @@ use App\Producto;
 class TiendaController extends Controller
 {
     // redirige al landing page con las tiendas de la base de datos guardads en una variable
-	function landingPage(){
+	function landingPage($lang = 'es'){
 		return view('welcome',[
-			'tiendas'=>Tienda::get()
+			'tiendas'=>Tienda::get(),
+            'lang'=>$lang
 		]);
 	}
 
     // redirige a la pantalla de una tienda especifica con los datos de ella
-    function getTienda($id){
+    function getTienda($id, $lang){
     	return view('tienda',[
     		'id'=>$id,
-    		'tienda'=>Tienda::where('id',$id)->first()
+    		'tienda'=>Tienda::where('id',$id)->first(),
+            'lang'=>$lang
     	]);
     }
 
     // redirige a la pantalla de gestión de una tienda especifica devolviendo datos sobre la tienda y sus productos (solo los del idioma actual)
-    function getGestion($id){
+    function getGestion($id, $lang){
     	return view('gestion',[
     		'id'=>$id,
     		'tienda'=>Tienda::where('id',$id)->first(),
-    		'productos'=>Producto::where('id_tienda',$id)->where('lang','es')->get()
+    		'productos'=>Producto::where('id_tienda',$id)->where('lang',$lang)->get(),
+            'lang'=>$lang
    		]);
     }
 
@@ -39,8 +42,11 @@ class TiendaController extends Controller
     }
 
     // redirige a la pantalla donde se pueden añadir productos a la tienda
-    function goAnadir($id){
-    	return view('anadir', ['tienda'=>Tienda::where('id',$id)->first()]);
+    function goAnadir($id, $lang){
+    	return view('anadir', [
+            'tienda'=>Tienda::where('id',$id)->first(),
+            'lang'=>$lang
+        ]);
     }
 
     // elimina el producto especificado y redirecciona a la pantalla de gestión de la tienda correspondiente a ese producto

@@ -13,7 +13,7 @@ body{
 	margin: 5vh 0;
 	flex-direction: row;
 }
-.compressed-header img{
+.compressed-header a, .compressed-header img{
 	height: 100%;
 }
 #tinfo{

@@ -8,6 +8,25 @@
         <script src="js/main.js"></script>
         <script src="lib/jquery.translate.js"></script>
         <script src="lib/traduccion.js"></script>
+        <script>
+            $(document).ready(function(){
+                lang = "{{$lang}}";
+                switch(lang){
+                    case 'en':
+                        cambiaridiomaen();
+                    break;
+                    case 'eus':
+                        cambiaridiomaeus();
+                    break;
+                    // el español es el idioma por defecto
+                    default:
+                        cambiaridiomaes();
+                    break;
+                }
+                let optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="{{$lang}}"]');
+                optionSelected[0].setAttribute('selected',true);
+            });
+        </script>
     </head>
     <body>
 
@@ -40,11 +59,13 @@
                 <li><a href="#main" class="trn" data-trn-key="Info">Información</a></li>
                 <li><a href="#tiendas" class="trn" data-trn-key="Tienda">Tiendas</a></li>
                 <li><a href="#contacto" class="trn" data-trn-key="datoscont">Datos de contacto</a></li>
-                <li><select name="idioma">
-                    <option onclick="cambiaridiomaes()" selected>ES</option>
-                    <option onclick="cambiaridiomaen()">EN</option>
-                    <option onclick="cambiaridiomaeus()">EUS</option>
-                </select></li>
+                <li>
+                    <a><select name="idioma" id="idiomaSelect">
+                        <option value="es" onclick="cambiaridiomaes()">ES</option>
+                        <option value="en" onclick="cambiaridiomaen()">EN</option>
+                        <option value="eus" onclick="cambiaridiomaeus()">EUS</option>
+                    </select></a>
+                </li>
             </ul>
         </nav>
 
@@ -65,7 +86,7 @@
             <section>
                 <div id="tiendas">
                     @foreach($tiendas as $tienda)
-                        <a href="{{url('t-'.$tienda->id)}}">
+                        <a href="{{url('t-'.$tienda->id)}}/" class="tiendaLink" data-url="{{url('t-'.$tienda->id)}}/">
                             <div class="tienda">
                                 <img src="/img/tiendas/{{$tienda->logo}}" alt="zara-logo">
                             </div>
@@ -95,6 +116,14 @@
                     </div>
                 </div>
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.5147058120165!2d-2.6711807709542152!3d42.86197925297592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc25aa31fd801%3A0x490b3150779ed227!2sCentro%20Comercial%20El%20Boulevard!5e0!3m2!1ses!2ses!4v1571211960538!5m2!1ses!2ses" frameborder="0" allowfullscreen=""></iframe>
+                
+                <form id="contact-form">
+                    <h5>¡Contacta con nosostros!</h5>
+                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="opinion" placeholder="Queja o consulta"></textarea>
+                    <input type="submit">
+                </form>
             </section>
         </div>
         <footer>David Belinchon, Koldo Intxausti y Jefry Molina &copy 2019</footer>

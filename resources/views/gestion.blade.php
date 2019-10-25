@@ -5,6 +5,20 @@
 @endsection
 
 @section('nav')
+	<select name="idioma" id="idiomaSelect" onchange="window.location='{{url('t-'.$tienda->id.'/gestion/')}}/'+this.options[this.selectedIndex].value">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="eus">EUS</option>
+    </select>
+@endsection
+@section('js')
+	<script>
+        $(document).ready(function(){
+            $('#addButton').attr('href','{{url('t-'.$tienda->id.'/anadir/')}}/'+getLang());
+            optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
+            optionSelected[0].setAttribute('selected',true);
+        })
+    </script>
 @endsection
 
 @section('content')
@@ -15,7 +29,7 @@
             <div id="tinfo">
                 <div>
                     <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                    <p><strong class="trn" data-trn-key="Loc">Localización en el Centro</strong>: {{$tienda->direccion}}</p>
+                    <p><strong class="trn" data-trn-key="Loc">Local</strong>: {{$tienda->direccion}}</p>
                     <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
                     <p><a href="{{$tienda->web}}">Web</a></p>
                 </div>
@@ -27,7 +41,7 @@
 				<input type="text" name="Filtro" id="filtroTexto">
 				<button id="filtroSubmit" class="trn" data-trn-key="Buscar">Buscar</button>
 				<button id="filtroClear" class="trn" data-trn-key="Limp">Limpiar</button>
-				<a href="{{url('t-'.$id.'/anadir')}}" class="trn" data-trn-key="Añadir">Añadir Nuevo</a>
+				<a href="{{url('t-'.$id.'/anadir')}}" class="trn" id="addButton" data-trn-key="Añadir">Añadir Nuevo</a>
 			</div>
 			<div class="container">
 				
