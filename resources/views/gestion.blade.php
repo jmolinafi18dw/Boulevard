@@ -16,16 +16,8 @@
         	<div id="selectedImage">
         		<img src=""/>
         	</div>
-            <div id="tinfo">
-                <div>
-                    <p><strong class="trn" data-trn-key="Desc">Descripción:&nbsp;</strong> {{$tienda->descripcion}}</p>
-                    <p><strong class="trn" data-trn-key="Loc">Local</strong>: {{$tienda->direccion}}</p>
-                    <p><strong class="trn" data-trn-key="Tlf">Teléfono</strong>: {{$tienda->telefono}}</p>
-                    <p><a href="{{$tienda->web}}">Web</a></p>
-                </div>
-                <div>
-                    <img src="/img/tiendas/{{$tienda->logo}}">
-                </div>
+            <div class="gestionTLogo">
+                <img src="/img/tiendas/{{$tienda->logo}}">
             </div>
             <div id="filtro">
 				<input type="text" name="Filtro" id="filtroTexto">
@@ -73,7 +65,7 @@
 		$('#addButton').attr('href','{{url('t-'.$tienda->id.'/anadir/')}}/'+getLang());
         optionSelected = document.getElementById('idiomaSelect').querySelectorAll('option[value="'+getLang()+'"]');
         optionSelected[0].setAttribute('selected',true);
-         
+
 		// cuando cambia el valor del checkbox se hace submit del formulario, y se cambia su valor en la base de datos
 		$('input[type="checkbox"]').change(function(){
 			$(this).siblings('input[type="submit"]').click();
